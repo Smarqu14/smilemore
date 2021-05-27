@@ -10,8 +10,11 @@ import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <Container>
-      <NavigationBar />
+    <>
+      <Container>
+        <NavigationBar />
+      </Container>
+
       <Switch>
         <Route exact path='/' component={Home}></Route>
         <Route path='/contact' component={Contact}></Route>
@@ -19,7 +22,7 @@ function App() {
         <Route path='/team' component={Team}></Route>
         <Route path='/about' component={About}></Route>
       </Switch>
-    </Container>
+    </>
   );
 }
 
