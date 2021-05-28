@@ -7,12 +7,16 @@ import {
   FormControl,
   Button,
 } from 'react-bootstrap';
+import Logo from '../../images/smile.png';
 import { Link } from 'react-router-dom';
+
 function NavigationBar() {
   return (
-    <div>
-      <Navbar bg='light' expand='lg'>
-        <Navbar.Brand href='#home'>Smile More</Navbar.Brand>
+    <>
+      <Navbar expand='lg'>
+        <Navbar.Brand as={Link} to='/'>
+          <img src={Logo} className='logo' alt='Dental office logo' />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='ml-auto'>
@@ -34,7 +38,7 @@ function NavigationBar() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    </div>
+    </>
   );
 }
 
